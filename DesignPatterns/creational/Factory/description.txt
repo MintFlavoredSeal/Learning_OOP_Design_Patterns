@@ -1,0 +1,6 @@
+a "factory" is an object for creating other objects
+
+Using factory patterns has various benefits just like:
+    - Descriptive names
+    - Encapsulation
+    - Easy-To-Maintain
