@@ -127,11 +127,14 @@ class Tree(Iterable):
     
     @mode.setter
     def mode(self, alt: str) -> None:
+        if not isinstance(alt, str):
+            raise TypeError("A property mode should be str.")
+        
         self._mode = alt
         
     def make_child(self, key: Any = None, parent: Any = None) -> None:
         if key in self:
-            raise ValueError("This object don't allow multiple keys")
+            raise ValueError("This object don't allow multiple keys.")
         
         if parent not in self:
             raise ValueError("The parent don't exist.")
